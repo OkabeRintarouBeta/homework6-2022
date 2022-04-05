@@ -30,7 +30,7 @@ fasterButton.addEventListener("click",function(){
 })
 skipButton.addEventListener("click",function(){
 	console.log("Original location ",video.currentTime);
-	video.currentTime+=15;
+	video.currentTime=(video.currentTime+15)%(video.duration);
 	console.log("New location ",video.currentTime)
 })
 
