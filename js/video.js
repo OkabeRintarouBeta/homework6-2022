@@ -15,6 +15,7 @@ window.addEventListener("load", function() {
 playButton.addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	document.querySelector('#volume').innerHTML=document.querySelector('#slider').value+"%";
 });
 pauseButton.addEventListener("click",function(){
 	console.log("Pause Video");
@@ -39,7 +40,7 @@ document.querySelector('#mute').addEventListener("click",function(e){
 	e.currentTarget.innerHTML=(video.muted?'Unmute':'Mute');
 })
 
-document.querySelector('#volume').innerHTML=document.querySelector('#slider').value+"%";
+
 
 document.querySelector('#slider').addEventListener("click",function(e){
 	// console.log(video.volume);
